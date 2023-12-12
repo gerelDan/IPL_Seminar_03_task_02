@@ -14,4 +14,13 @@ int[] CreateRandomArray(int size, int start, int end)
     return result;
 }
 int[] arr = CreateRandomArray(10, 1, 100);
-Console.WriteLine($"[{string.Join(", ", arr)}]");
+Console.WriteLine($"arr = [{string.Join(", ", arr)}]");
+int count_eval = 0;
+for (int i=0; i<arr.Length; i++)
+{
+    if (arr[i] % 2 == 0)
+    {
+        count_eval++;
+    }
+}
+Console.WriteLine($"Число четных элементов массива arr {count_eval}");
